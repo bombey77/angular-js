@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myFilter">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../app/lib/angular.min.js"></script>
+    <script src="../filter/app.js"></script>
+</head>
+<body>
+
+<input type="text" ng-model="search"/>
+<div ng-controller="filterController">
+    <p ng-repeat="user in users | orderBy: '-name' | filter: search">
+        {{user.name}} -
+        {{user.salary | currency: 'PL'}}
+    </p>
+</div>
+
+</body>
+</html>
