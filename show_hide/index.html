@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApplication">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../app/lib/angular.min.js"></script>
+    <script src="myApp.js"></script>
+</head>
+<body>
+
+<div ng-controller="myController">
+    <ul>
+        <li ng-repeat="user in users" ng-show="{{user.available}}">{{user.name}}</li>
+    </ul>
+    <br>
+    <ul>
+        <li ng-repeat="user in users" ng-hide="{{user.available}}">{{user.name}}</li>
+    </ul>
+    <br>
+    <ul>
+        <!-- отрицание -->
+        <li ng-repeat="user in users" ng-show="{{!user.available}}">{{user.name}}</li>
+    </ul>
+</div>
+
+</body>
+</html>
