@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../app/lib/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+// обрати внимание путь прописывается в одинарных кавычках
+
+// 1-й способ (лучше используй 2-й т.к. в DOM будет тег header)
+<!--<ng-include src="'../include_directive/header.html'"></ng-include>-->
+// 2-й способ
+<header ng-include="'../include_directive/header.html'"></header>
+
+<div ng-controller="myUserController">
+    <ul>
+        <li ng-repeat="user in users">{{user}}</li>
+    </ul>
+</div>
+
+</body>
+</html>
