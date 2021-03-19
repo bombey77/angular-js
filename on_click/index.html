@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../app/lib/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+<div ng-controller="onClickController">
+    <ul>
+        <li ng-repeat="user in users">{{user.name}} <button ng-click="removeUser(user)"> * </button></li>
+    </ul>
+</div>
+
+</body>
+</html>
