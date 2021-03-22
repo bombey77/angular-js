@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="submitApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../app/lib/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+<div ng-controller="submitController">
+    <form ng-submit="addUser()">
+        <input type="text" placeholder="Name" ng-model="usr.name"/>
+        <input type="text" placeholder="Age" ng-model="usr.age"/>
+        <input type="text" placeholder="Salary" ng-model="usr.salary"/>
+        <input type="submit" value="Add user"/>
+    </form>
+
+    <ul>
+        <li ng-repeat="user in users | filter: usr.name">
+            {{user.name}}
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
