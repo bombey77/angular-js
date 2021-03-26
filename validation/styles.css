@@ -1,0 +1,16 @@
+.input-form.ng-touched.ng-invalid {
+    border: 2px red solid;
+}
+
+.input-form {
+    margin-bottom: 20px;
+}
+
+small {
+    color: red;
+}
+
+input[disabled="disabled"] {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+}
