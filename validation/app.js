@@ -1,7 +1,17 @@
-var validationApp = angular.module('validationApp', []);
+var validationApp = angular.module('validationApp', ['ngRoute']);
 
-validationApp.controller('validationController', ['$scope', function($scope) {
+validationApp.config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+        .when('/user-success', {
+            templateUrl: '../validation/user-success.html'
+        })
+        .otherwise({
+            redirectTo: '/'
+        })
+}]);
+
+validationApp.controller('validationController', ['$scope', '$location', function ($scope, $location) {
     $scope.loginUser = function (user) {
-        console.log(user);
+        $location.path('/user-success');
     }
 }]);

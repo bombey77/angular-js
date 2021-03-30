@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="../app/lib/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -25,5 +26,6 @@
         <input type="submit" ng-disabled="userForm.$invalid" value="Log In"/>
     </form>
 </div>
+<div ng-view></div>
 </body>
 </html>
