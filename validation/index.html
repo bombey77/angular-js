@@ -10,7 +10,8 @@
 </head>
 <body>
 <div ng-controller="validationController">
-    <form name="userForm" ng-submit="loginUser(user)">
+    <!-- 'novalidate' - attribute is used to disable browser's native form validation -->
+    <form name="userForm" ng-submit="loginUser(user)" novalidate>
         <input class="input-form" name="userName" type="text" ng-model="user.name" placeholder="Username"
                ng-required="true"/>
         <div ng-show="userForm.userName.$touched && userForm.userName.$invalid">
