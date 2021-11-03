@@ -1,6 +1,6 @@
 var customDirectiveApp = angular.module('customDirectiveApp', []);
 
-customDirectiveApp.controller('customController', ['$scope', function($scope) {
+customDirectiveApp.controller('customController', ['$scope', $scope => {
     $scope.users = [
         {
             name: 'Roman',
@@ -19,7 +19,7 @@ customDirectiveApp.controller('customController', ['$scope', function($scope) {
         }];
 }]);
 
-customDirectiveApp.directive('customUsers', [function () {
+customDirectiveApp.directive('customUsers', [() => {
     return {
         restrict: 'E',
         scope: {
@@ -27,7 +27,7 @@ customDirectiveApp.directive('customUsers', [function () {
         },
         replace: true,
         templateUrl: '../replace/custom_users.html',
-        controller: function ($scope) {
+        controller: $scope => {
             $scope.index = 1;
         }
     }
